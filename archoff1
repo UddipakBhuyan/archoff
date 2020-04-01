@@ -2,3 +2,4 @@
 
 cp -ax / /mnt
 cp -vaT /run/archiso/bootmnt/arch/boot/$(uname -m)/vmlinuz /mnt/boot/vmlinuz-linux
+arch-chroot /mnt /bin/bash
