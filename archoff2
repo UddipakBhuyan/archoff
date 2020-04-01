@@ -14,3 +14,12 @@ rm -r /etc/initcpio
 
 pacman-key --init
 pacman-key --populate archlinux
+
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+vim /etc/hostname
+cat hosts >> /etc/hosts
+mkinitcpio -P
+passwd
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
