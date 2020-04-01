@@ -2,4 +2,5 @@
 
 cp -ax / /mnt
 cp -vaT /run/archiso/bootmnt/arch/boot/$(uname -m)/vmlinuz /mnt/boot/vmlinuz-linux
+genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
